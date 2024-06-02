@@ -25,7 +25,11 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
+.go-back{
+  font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
 .gallery {
   list-style-type: none;
   width: 1440px;

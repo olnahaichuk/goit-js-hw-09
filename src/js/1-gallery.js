@@ -90,6 +90,7 @@ function imagesTemplate(images) {
 const markup = imagesTemplate(images);
 
 const gallery = document.querySelector(".gallery");
+console.log(gallery);
 gallery.innerHTML = markup;
 
 
