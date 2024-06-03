@@ -14,8 +14,8 @@ form.addEventListener('input', () => {
     const formData = new FormData(form);
     const email = formData.get('email');
     const message = formData.get('message');
-    formData.email = email;
-    formData.message= message;
+    formData.email = email.trim();
+    formData.message= message.trim();
     saveToLS('email', email);
     saveToLS('message', message)
     
@@ -29,8 +29,8 @@ form.addEventListener('submit', (e) => {
     const email = formData.get('email');
     const message = formData.get('message');
     if (email && message) {
-         formData.email = email;
-        formData.message = message;
+         formData.email = email.trim();
+        formData.message = message.trim();
          console.log(formData);
     
     form.reset();
