@@ -12,10 +12,10 @@ const textarea = document.querySelector('textarea');
 
 form.addEventListener('input', () => {
     const formData = new FormData(form);
-    const email = formData.get('email');
-    const message = formData.get('message');
-    formData.email = email.trim();
-    formData.message= message.trim();
+    const email = formData.get('email').trim();
+    const message = formData.get('message').trim();
+    formData.email = email;
+    formData.message= message;
     saveToLS('email', email);
     saveToLS('message', message)
     
@@ -26,11 +26,11 @@ form.addEventListener('input', () => {
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(form);
-    const email = formData.get('email');
-    const message = formData.get('message');
+    const email = formData.get('email').trim();
+    const message = formData.get('message').trim();
     if (email && message) {
-         formData.email = email.trim();
-        formData.message = message.trim();
+         formData.email = email;
+        formData.message = message;
          console.log(formData);
     
     form.reset();
